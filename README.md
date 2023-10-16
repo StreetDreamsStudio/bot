@@ -5,17 +5,19 @@
 </head>
 <body>
     <h1 id="text">hi</h1>
-    <button onclick="toggleText()">Toggle</button>
+    <button id="toggleButton">Toggle</button>
 
     <script>
-        function toggleText() {
-            var textElement = document.getElementById("text");
+        var textElement = document.getElementById("text");
+        var toggleButton = document.getElementById("toggleButton");
+
+        toggleButton.addEventListener("click", function() {
             if (textElement.innerText === "hi") {
                 textElement.innerText = "bye";
             } else {
                 textElement.innerText = "hi";
             }
-        }
+        });
     </script>
 </body>
 </html>
